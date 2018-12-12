@@ -1,0 +1,6 @@
+SELECT current_setting('port') = '6002' AS is_prod \gset
+\if :is_prod
+  \set PROMPT1 '\nprod %x%/$ '
+\else
+  \set  PROMPT1 '\ntest %x%/$ '
+\endif
