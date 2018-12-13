@@ -59,6 +59,7 @@ echo 'export PATH=/usr/lib/postgresql/11/bin/:$PATH' >> .bash_profile
 source .bash_profile
 ```
 ###### Szybka konfiguracja baz danych
+```
 modyfikacja parametrów w plikach konfiguracyjnych :
 test/postgresql.conf : port=6001
 prod/postgresql.conf : port=6002
@@ -70,6 +71,7 @@ log_filename='postgresql-%Y-%m-%d.log
 modyfikacja linii w plikach konfiguracyjnych:
 test/pg_hba.conf : host	all	all	127.0.0.1/32	md5
 prod/hba.conf : host	all	all	127.0.0.1/32	md5
+```
 ###### Uruchomienie obu instancji baz
 ```
 pg_ctl -D test/ start
@@ -176,10 +178,9 @@ zmiana zapytania, wyjście z vim'a :wq
 ```
 \e
 :w zapytanie.sql
+```
 
 
-
-materialy/scripts/
 ###### Plik wdrożeniowy 2
 
 ###### Raporty 
