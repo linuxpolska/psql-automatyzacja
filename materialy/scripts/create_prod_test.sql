@@ -4,7 +4,7 @@ SELECT EXISTS(SELECT 1 FROM pg_tables WHERE tablename='version') AS table_exists
 \if :table_exists
   \echo Tabela już istnieje, pomijam tworzenie
 \else
-  \ echo Tworzenie tabeli version
+  \echo Tworzenie tabeli version
   CREATE TABLE version(id serial primary key, version_no serial, comments text) \g
 \endif
 
